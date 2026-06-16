@@ -1,0 +1,171 @@
+:root {
+    --primary: #2e7d32;
+    --primary-light: #4caf50;
+    --secondary: #1565c0;
+    --dark: #212121;
+    --light: #f5f5f5;
+    --white: #ffffff;
+    --danger: #c62828;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* SEÇÕES */
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+/* FORMULÁRIOS E BOTÕES */
+input, select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--primary-light);
+}
+
+/* QUIZ */
+.quiz-option {
+    background: #eee;
+    padding: 12px;
+    margin: 8px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: var(--transition);
+    max-width: 500px;
+}
+
+.quiz-option:hover {
+    background: #e0e0e0;
+}
+
+.result-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e8f5e9;
+    border-left: 4px solid var(--primary);
+    display: none;
+    border-radius: 0 4px 4px 0;
+    max-width: 500px;
+}
+
+/* MENU MOBILE */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

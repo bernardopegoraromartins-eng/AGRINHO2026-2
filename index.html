@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroVerde – Sustentabilidade no Agronegócio</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">🍃 AgroVerde</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#calc">Calculadora</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Agronegócio Sustentável</h1>
+        <p>Produzir hoje preservando o amanhã</p>
+    </section>
+
+    <section id="quiz">
+        <h2>Quiz Sustentabilidade</h2>
+        <p>Clique na alternativa correta:</p>
+        <div class="quiz-option" onclick="responderQuiz(this, true)">
+            Agroecologia e agricultura sustentável ajudam a preservar o meio ambiente.
+        </div>
+        <div class="quiz-option" onclick="responderQuiz(this, false)">
+            O desmatamento desenfreado sempre melhora a produção a longo prazo.
+        </div>
+        <div class="result-box" id="quizResult"></div>
+    </section>
+
+    <section id="calc">
+        <h2>Calculadora de Impacto Estimado</h2>
+        <p>Simule o índice de impacto com base na área e tipo de cultivo:</p>
+        
+        <label for="area">Área da propriedade:</label>
+        <input id="area" type="number" placeholder="Área (hectares)" min="1">
+        
+        <label for="cultivo">Tipo de cultivo:</label>
+        <select id="cultivo">
+            <option value="soja">Soja Tradicional</option>
+            <option value="milho">Milho Tradicional</option>
+            <option value="organico">Cultivo Orgânico / Sustentável</option>
+        </select>
+        
+        <button class="btn" onclick="calcularImpacto()">Calcular Impacto</button>
+        <div class="result-box" id="resultado"></div>
+    </section>
+
+</body>
+</html>
